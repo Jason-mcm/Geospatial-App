@@ -1,0 +1,16 @@
+{% extends "campsite/base.html" %}
+
+{% load tethys_gizmos static %}
+
+
+
+{% block styles %}
+    {{ block.super }}
+    <link href="{% static 'campsite/css/map.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+
+{% block app_content %}
+{% gizmo map_options %}
+{% endblock %}
+
